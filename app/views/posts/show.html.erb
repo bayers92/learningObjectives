@@ -1,14 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div class = "small-12 columns text-right">
+	<%= link_to "Random Question", :get_random_question, :class => "button", :as => :get_random_question %>
+</div> 
+
+<div class = "small-12 columns">
+<h5>
   <strong>Question:</strong>
   <%= @post.question %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-
+</h5>
+<!-- 
 <%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path %> -->
+
+</div>
+
+<div class = "small-12 columns">
+<dl class="accordion" data-accordion>
+  <dd class="accordion-navigation">
+    <a href="#panel1b">Answer >> </a>
+    <div id="panel1b" class="content">
+		<%= @post.body %>
+    </div>
+  </dd>
+</dl>
+</div>
+
+<div class = "small-12 columns home_link">
+	<%= button_to 'Home', root_path, :class => "button info", :method => :get %>
+</div>

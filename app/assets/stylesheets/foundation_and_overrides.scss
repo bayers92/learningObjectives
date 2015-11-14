@@ -1485,4 +1485,10 @@ $include-html-global-classes: $include-html-classes;
 // $include-table-visibility-classes: true;
 // $include-legacy-visibility-classes: true;
 
+.home_link {
+	position: fixed !important;
+	bottom: 5px;
+	left: 0px;
+}
+
 @import 'foundation';

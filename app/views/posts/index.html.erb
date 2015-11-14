@@ -1,7 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<div class = "small-12 medium-6 columns small-text-center medium-text-left">
 <h1>Listing Posts</h1>
+</div>
 
+<div class = "small-12 medium-6 columns small-text-center medium-text-right">
+  <%= link_to "Random Question", :get_random_question, :class => "button", :as => :get_random_question %>
+</div> 
+
+<div class = "small-12 columns">
 <table>
   <thead>
     <tr>
@@ -24,6 +31,8 @@
   </tbody>
 </table>
 
+
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+</div>
+<!-- <%= link_to 'New Post', new_post_path %> -->
