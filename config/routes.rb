@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :commots
   resources :posts
+
+  get '/random_question' => 'posts#get_random_question', as: :get_random_question
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

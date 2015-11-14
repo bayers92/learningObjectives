@@ -12,6 +12,11 @@ class PostsController < ApplicationController
   def show
   end
 
+  def get_random_question
+    @post = Post.all.shuffle.first()
+    redirect_to @post
+  end
+
   # GET /posts/new
   def new
     @post = Post.new
