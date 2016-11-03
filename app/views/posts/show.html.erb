@@ -9,10 +9,31 @@
   <strong>Question:</strong>
   <%= @post.question %>
 </h5>
+<% if @post.image_uno_file_size != nil %>
 <h5>
   <strong>Image 1:</strong>
   <%= image_tag @post.image_uno.url(:large) %>
 </h5>
+<% end %>
+<% if @post.image_dos_file_size != nil%>
+<h5>
+  <strong>Image 2:</strong>
+  <%= image_tag @post.image_dos.url(:large) %>
+</h5>
+<% end %>
+<% if @post.image_tres_file_size != nil%>
+<h5>
+  <strong>Image 3:</strong>
+  <%= image_tag @post.image_tres.url(:large) %>
+</h5>
+<% end %>
+<% if @post.image_quatro_file_size != nil%>
+<h5>
+  <strong>Image 4:</strong>
+  <%= image_tag @post.image_quatro.url(:large) %>
+</h5>
+<% end %>
+
 <!-- 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %> -->
