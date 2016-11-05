@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103131505) do
+ActiveRecord::Schema.define(version: 20161105222253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20161103131505) do
     t.string   "image_quatro_content_type"
     t.integer  "image_quatro_file_size"
     t.datetime "image_quatro_updated_at"
+    t.integer  "block"
+    t.string   "label"
   end
 
 end

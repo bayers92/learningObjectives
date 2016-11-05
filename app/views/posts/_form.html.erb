@@ -11,13 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+<!--   <div class="field">
     <%= f.label :question %><br>
     <%= f.text_area :question %>
   </div>
   <div class="field">
     <%= f.label :body %><br>
     <%= f.text_area :body %>
+  </div> -->
+  <div class="field">
+    <%= f.input :block, as: :integer%>
+  </div>
+  <div class="field">
+    <%= f.input :label %>
   </div>
   <div class="field">
     <%= f.input :image_uno, as: :file %>
@@ -32,6 +38,6 @@
     <%= f.input :image_quatro, as: :file %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>

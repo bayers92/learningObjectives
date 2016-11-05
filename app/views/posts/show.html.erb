@@ -1,56 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<div class = "small-12 columns text-right">
-	<%= link_to "Random Question", :get_random_question, :class => "button", :as => :get_random_question %>
-</div> 
-
-<div class = "small-12 columns">
-<h5>
-  <strong>Question:</strong>
-  <%= @post.question %>
-</h5>
+<div class="row">
+      <div class="small-12 columns">
+        <h1>What Do I See?</h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="small-12 columns">
 <% if @post.image_uno_file_size != nil %>
-<h5>
-  <strong>Image 1:</strong>
   <%= image_tag @post.image_uno.url(:large) %>
-</h5>
 <% end %>
 <% if @post.image_dos_file_size != nil%>
-<h5>
-  <strong>Image 2:</strong>
   <%= image_tag @post.image_dos.url(:large) %>
-</h5>
 <% end %>
 <% if @post.image_tres_file_size != nil%>
-<h5>
-  <strong>Image 3:</strong>
   <%= image_tag @post.image_tres.url(:large) %>
-</h5>
 <% end %>
 <% if @post.image_quatro_file_size != nil%>
-<h5>
-  <strong>Image 4:</strong>
   <%= image_tag @post.image_quatro.url(:large) %>
-</h5>
 <% end %>
-
-<!-- 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %> -->
-
-</div>
-
-<div class = "small-12 columns">
-<dl class="accordion" data-accordion>
-  <dd class="accordion-navigation">
-    <a href="#panel1b">Answer >> </a>
-    <div id="panel1b" class="content">
-		<%= @post.body %>
+      </div>
     </div>
-  </dd>
-</dl>
-</div>
 
-<div class = "small-12 columns home_link">
-	<%= button_to 'Home', root_path, :class => "button info", :method => :get %>
+    <div class = "row answer text-right">
+        <a class = "button" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false">Answer</a>
+        <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+          <li><a href="#">Salivary Gland</a></li>
+        </ul>
+    </div>
+
+
+
+
+<div class = "row">
+    <div class = "small-12 columns text-center">
+      <br/><br/>
+  <form method="post">
+  <p><input class = "button info"type="button" name="B1" value="What Else Do I See??" onclick="randomlink()"></p> </form>
+  </div>
+  <div class = "small-12 columns text-center">
+    <p><%= link_to "Ahh I need to study!", root_url %></p>
+  </div>
 </div>
