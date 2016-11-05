@@ -168,7 +168,7 @@ DEPENDENCIES
   foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 5.0.0)
+  paperclip
   pg
   railroady
   rails (= 4.2.2)

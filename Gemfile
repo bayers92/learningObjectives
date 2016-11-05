@@ -49,5 +49,5 @@ gem 'foundation-rails'
 
 gem 'railroady'
 gem 'rails_12factor', group: :production
-gem "paperclip", "~> 5.0.0"
+gem "paperclip"
 gem 'simple_form'
