@@ -95,28 +95,32 @@ $include-html-global-classes: $include-html-classes;
 // $font-weight-normal: normal;
 // $font-weight-bold: bold;
 
-// $white       : #FFFFFF;
-// $ghost       : #FAFAFA;
-// $snow        : #F9F9F9;
-// $vapor       : #F6F6F6;
-// $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
-// $iron        : #CCCCCC;
-// $base        : #AAAAAA;
-// $aluminum    : #999999;
-// $jumbo       : #888888;
-// $monsoon     : #777777;
-// $steel       : #666666;
-// $charcoal    : #555555;
-// $tuatara     : #444444;
-// $oil         : #333333;
-// $jet         : #222222;
-// $black       : #000000;
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #008CBA;
+$dark-gray: #696969;
+$medium-gray: #C2C0C0;
+$light-gray: #F9F6F6;
+
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -1497,5 +1501,93 @@ $include-html-global-classes: $include-html-classes;
 	z-index: 9999;
 	position: fixed;
 }
+
+
+
+
+
+
+
+
+.button.alt {
+	color: $white;
+    background-color: $primary-color;
+    // border: 2px solid $white;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 27px;
+    padding-right: 27px;
+    margin-left: 15px;
+    margin-right: 15px;
+	a {
+		color: $primary-color;
+	}
+	&:hover {
+		background-color: white;
+		color: $primary-color !important;
+	}
+}
+.button.alt2 {
+	color: $primary-color !important;
+    background-color: rgba(255,255,255,0);
+    border: 2px solid $white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+	&:hover {
+		background-color: white;
+		color: $primary-color !important;
+	}
+
+}
+.button.alt3 {
+	color: #FA584F !important;
+    background-color: rgba(255,255,255,0);
+    border: 2px solid #FA584F;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+	a {
+		color: #FA584F !important;
+	}
+	&:hover {
+		background-color: #FA584F !important;
+		color: white !important;
+	}
+
+}
+.button.alt4 {
+	color: $dark-gray !important;
+    background-color: rgba(255,255,255,0);
+    border: 2px solid $dark-gray;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+	&:hover {
+		background-color: $dark-gray !important;
+		color: white !important;
+	}
+
+}
+
+.flash-message {
+	top: 5;
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+}
+
+
+
+
 
 @import 'foundation';

@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+<% if @post.image_uno_file_size != nil %>
+  <%= image_tag @post.image_uno.url(:large) %>
+<% end %>
+  <div class="field">
+    <%= f.input :marker %>
+  </div>
 <!--   <div class="field">
     <%= f.label :question %><br>
     <%= f.text_area :question %>

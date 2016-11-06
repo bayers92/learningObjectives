@@ -51,3 +51,5 @@ gem 'railroady'
 gem 'rails_12factor', group: :production
 gem "paperclip"
 gem 'simple_form'
+gem 'aws-sdk', '~> 2.3'
+gem 'devise'

@@ -17,3 +17,13 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+
+// Alert box settings
+$(document).ready(function(){
+  setTimeout(function(){
+    // $('.alert-box').remove();
+    $('.close').click();
+  }, 2000);
+ });
+
