@@ -14,7 +14,12 @@ class PostsController < ApplicationController
   end
 
   def get_random_question
-    @post = Post.all.shuffle.first()
+    if current_user.blocky > 5
+      @eligibles = Post.where("block <= ?",(current_user.blocky-5)).where("block != ?",0)
+    else
+      @eligibles = Post.where("block = ?",current_user.blocky)
+    end
+    @post = @eligibles.shuffle.first()
     redirect_to @post
   end
 
