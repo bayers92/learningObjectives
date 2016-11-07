@@ -15,24 +15,19 @@
   <body>
 
     <div class = "row">
-      <div class ="small-10 medium-6 small-centered columns">
+      <div class ="small-10 medium-4 small-centered columns">
         <%= render 'application/alerts' %>
       </div>
     </div>
 
 
 
+    <%= render 'application/topBar' %>
+
 
           <div class = "heading show-for-medium-up" id = "heading">
-            <div class = "small-6 medium-6 columns">
-              <!-- <div class = "logo">
-                <a href="/">
-                  <%= image_tag "brandclub_logo_white.png" %>
-                </a>
-              </div> -->
-            </div>
 
-
+<!-- 
             <div class = "small-6 medium-6 columns devise_links text-right fixed">
               <% if user_signed_in? %>
 
@@ -43,11 +38,9 @@
               <% else %>
                 <%= button_to "Login", new_user_session_path, :class => "button alt right",  method: :get %>
                 <%= button_to "Sign Up", new_user_registration_path, :class => "button alt2 right",  method: :get %>
-              <% end %>
+              <% end %> -->
 
-              <%= render 'application/blocky' %>
               
-            </div>
           </div>
           <!-- END NAVIGATION -->
 

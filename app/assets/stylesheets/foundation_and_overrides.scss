@@ -121,9 +121,9 @@ $dark-gray: #696969;
 $medium-gray: #C2C0C0;
 $light-gray: #F9F6F6;
 
-// $secondary-color: #e7e7e7;
+$secondary-color: #43AC6A;
 // $alert-color: #f04124;
-// $success-color: #43AC6A;
+$success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
@@ -552,7 +552,7 @@ $light-gray: #F9F6F6;
 // $f-dropdown-margin-bottom: $f-dropdown-margin-top;
 
 // We use this to control the background color
-// $f-dropdown-bg: $white;
+$f-dropdown-bg: $oil !important;
 
 // We use this to set the border styles for dropdowns.
 // $f-dropdown-border-style: solid;
@@ -561,12 +561,12 @@ $light-gray: #F9F6F6;
 
 // We use these to style the triangle pip.
 // $f-dropdown-triangle-size: 6px;
-// $f-dropdown-triangle-color: $white;
+$f-dropdown-triangle-color: $white;
 // $f-dropdown-triangle-side-offset: 10px;
 
 // We use these to control styles for the list elements.
 // $f-dropdown-list-style: none;
-// $f-dropdown-font-color: $charcoal;
+// $f-dropdown-font-color: $white;
 // $f-dropdown-font-size: rem-calc(14);
 // $f-dropdown-list-padding: rem-calc(5, 10);
 // $f-dropdown-line-height: rem-calc(18);
@@ -1580,7 +1580,7 @@ $light-gray: #F9F6F6;
 }
 
 .flash-message {
-	top: 5px;
+	// top: 5px;
 	position: absolute;
 	width: 100%;
 	z-index: 999;
@@ -1588,10 +1588,46 @@ $light-gray: #F9F6F6;
 	text-align: center;
 }
 
-.notice {
-	background-color: rgba(0, 140, 186, 0.6) !important;
+.alert-box {
+    border-style: solid;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: normal;
+    padding: 0.75rem 1.5rem 0.75rem 0.875rem !important;
+    position: relative;
+    transition: opacity 300ms ease-out;
+    background-color: #008CBA;
+    border-color: rgba(0,0,0,0) !important;
+    color: #FFFFFF;
 }
 
+.notice {
+	background-color: rgba(67, 172, 106, 0.6) !important;
+	border: none;
+}
+
+
+
+
+
+
+.active2 {
+	background-color: $secondary-color !important;
+	a:not(.button) {
+		background-color: $secondary-color !important;
+	}
+}
+
+.block-dropdown {
+	background-color: $oil !important;
+	color: white !important;
+	text-align: center;
+}
+.block-dropdown2 {
+	background-color: $primary-color !important;
+	color: white !important;
+	text-align: center;
+}
 
 
 

@@ -14,13 +14,34 @@ class PostsController < ApplicationController
   end
 
   def get_random_question
-    if current_user.blocky > 5
-      @eligibles = Post.where("block <= ?",(current_user.blocky-5)).where("block != ?",0)
-    else
-      @eligibles = Post.where("block = ?",current_user.blocky)
+    if current_user.blockyy1 
+      @block1 = Post.where("block =?", 1)
     end
+    if current_user.blockyy2 
+      @block2 = Post.where("block =?", 2)
+    end
+    if current_user.blockyy3 
+      @block3 = Post.where("block =?", 3)
+    end
+    if current_user.blockyy4 
+      @block4 = Post.where("block =?", 4)
+    end
+    if current_user.blockyy5 
+      @block5 = Post.where("block =?", 5)
+    end
+
+    @eligibles = Array(@block1)+Array(@block2)+Array(@block3)+Array(@block4)+Array(@block5)
+
     @post = @eligibles.shuffle.first()
-    redirect_to @post
+
+    if @post != nil
+      redirect_to @post
+    else
+      respond_to do |format|
+        format.html { redirect_to root_url, notice: '< Please select at least 1 block.' }
+        format.json { render :show, status: :ok, location: @post }
+      end
+    end
   end
 
   # GET /posts/new
