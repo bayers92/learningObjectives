@@ -5,7 +5,7 @@
       <h1><a href="/">UR Histo</a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> -->
   </ul>
 
   <section class="top-bar-section">
@@ -29,11 +29,11 @@
       <!-- Random Question Tab -->
       <li class = "active"><%= link_to "Random Question", :get_random_question, :class => "button", :as => :get_random_question, data: { no_turbolink: true }, :class => "li active" %></li>
      
-<!--       <% if user_signed_in? %>
+      <% if user_signed_in? %>
         <li>
-          <%= button_to "Logout", destroy_user_session_path, :class => "button",  method: :delete %>
+          <%= button_to "Logout", destroy_user_session_path, :class => "button alt5",  method: :delete %>
         </li>
-      <% end %> -->
+      <% end %>
 
     </ul>
 
