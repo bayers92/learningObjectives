@@ -15,7 +15,7 @@
   <body>
 
     <div class = "row">
-      <div class ="small-12 medium-8 medium-centered columns">
+      <div class ="small-10 medium-6 small-centered columns">
         <%= render 'application/alerts' %>
       </div>
     </div>
@@ -41,12 +41,12 @@
                 <%= link_to "Random Question", :get_random_question, :class => "button", :as => :get_random_question, data: { no_turbolink: true } %>
               <% end %>
               <% else %>
-
-              <%= button_to "Login", new_user_session_path, :class => "button alt right",  method: :get %>
-              <%= button_to "Sign Up", new_user_registration_path, :class => "button alt2 right",  method: :get %>
-
-
+                <%= button_to "Login", new_user_session_path, :class => "button alt right",  method: :get %>
+                <%= button_to "Sign Up", new_user_registration_path, :class => "button alt2 right",  method: :get %>
               <% end %>
+
+              <%= render 'application/blocky' %>
+              
             </div>
           </div>
           <!-- END NAVIGATION -->
