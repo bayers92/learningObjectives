@@ -8,10 +8,13 @@
     <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> -->
   </ul>
 
+
+        <!-- DON"T DISPLAY ANYTHING IF NO CURRENT USER -->
+      <% if current_user %>
+
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-
 
       <!-- Answer Tab -->
       <% if @post != nil %>
@@ -50,5 +53,9 @@
     </ul>
     
   </section>
+
+
+      <% end %>
+        <!-- END IF CURRENT_USER -->
 </nav>
 </div>
