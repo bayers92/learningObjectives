@@ -34,13 +34,11 @@
       <!-- Random Question Tab -->
       <li class = "active"><%= link_to "Random Question", :get_random_question, :class => "button", :as => :get_random_question, data: { no_turbolink: true }, :class => "li active" %></li>
      
-     <div class = "show-for-large-only">
       <% if user_signed_in? %>
-        <li>
+        <li class = "show-for-large-only">
           <%= button_to "Logout", destroy_user_session_path, :class => "button alt5",  method: :delete %>
         </li>
       <% end %>
-    </div>
 
     </ul>
 
