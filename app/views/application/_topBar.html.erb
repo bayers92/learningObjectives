@@ -13,14 +13,27 @@
       <% if current_user %>
 
   <section class="top-bar-section">
+        <!-- Left Nav Section -->
+    
+    <ul class="left">
+      <%= render 'application/alerts' %>
+
+      <!-- Select Blocks Tab -->
+       <li class="has-dropdown active">
+        <a href="#">Select blocks</a>
+        <%= render 'application/blocky' %>
+      </li>
+    </ul>
+
+
+    
     <!-- Right Nav Section -->
     <ul class="right">
 
       <!-- Answer Tab -->
-      <div class = "show-for-large-only">
       <% if @post != nil %>
         <% if @post.label != nil %>
-          <li class="has-dropdown active active2">
+          <li class="has-dropdown active active2 show-for-large-only">
             <span class = "active2"><a href="#">Answer</a></span>
             <ul class="dropdown">
               <li class = "active active2"><a href="#"><%= @post.label %></a></li>
@@ -28,7 +41,6 @@
           </li>
         <% end %>
       <% end %>
-      </div>
 
 
       <!-- Random Question Tab -->
@@ -40,18 +52,6 @@
         </li>
       <% end %>
 
-    </ul>
-
-    <!-- Left Nav Section -->
-    
-    <ul class="left">
-      <%= render 'application/alerts' %>
-
-      <!-- Select Blocks Tab -->
-       <li class="has-dropdown active">
-        <a href="#">Select blocks</a>
-        <%= render 'application/blocky' %>
-      </li>
     </ul>
     
   </section>
