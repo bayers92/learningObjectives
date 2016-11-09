@@ -1,0 +1,1 @@
+Learningobjectives::Application.config.secret_key_base = 'a721df3d5c1926ac5eea185efd811e0ae26af05ce50e5d61a900883964b6f542085db7d635978a55ede11cd7094ff2fd7b40f057c5aaebde477df803e921d8ce'
