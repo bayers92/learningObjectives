@@ -34,19 +34,20 @@ class PostsController < ApplicationController
     @eligibles = Array(@block1)+Array(@block2)+Array(@block3)+Array(@block4)+Array(@block5)
 
     @post = @eligibles.shuffle.sample
+    if @post != nil
+      @x = 0
+      while ((current_user.rez.include?@post.id) && (@x < (@eligibles.length)))
+        @post = @eligibles.shuffle.sample
+        @x += 1
+      end
 
-    @x = 0
-    while ((current_user.rez.include?@post.id) && (@x < (@eligibles.length)))
-      @post = @eligibles.shuffle.sample
-      @x += 1
-    end
+      current_user.update_attributes(:rez => current_user.rez.push(@post.id))
 
-    current_user.update_attributes(:rez => current_user.rez.push(@post.id))
-
-    if current_user.rez.length == 11
-      @temp = current_user.rez
-      @temp.shift
-      current_user.update_attributes(:rez => @temp)
+      if current_user.rez.length == 11
+        @temp = current_user.rez
+        @temp.shift
+        current_user.update_attributes(:rez => @temp)
+      end
     end
 
     if @post != nil
